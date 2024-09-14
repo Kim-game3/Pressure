@@ -7,17 +7,9 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public Button Scene;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool S_Four = false;
+    public bool S_Three = false;
+    public bool S_Two = false;
 
     public void MoveTitle()
     {
@@ -29,8 +21,26 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("TimeSetting");
     }
 
-    public void MoveMain() 
+    public void MoveMain_Four() 
     {
+        S_Four = true; 
         SceneManager.LoadScene("Main");
+    }
+
+    public void MoveMain_Three()
+    {
+        S_Three = true;
+        SceneManager.LoadScene("Main");
+    }
+
+    public void MoveMain_Two() 
+    {
+        S_Two = true;
+        SceneManager.LoadScene("Main");
+    }
+
+    public void QuitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
